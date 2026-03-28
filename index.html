@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — Educational Studies & Adult Learning</title>
+  <title>Portfolio — Meghan Gilligan | Educational Studies</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -46,7 +46,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 3rem;
+      padding: 0 5%;
       z-index: 100;
     }
 
@@ -61,232 +61,71 @@
 
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 2rem;
       list-style: none;
     }
 
     .nav-links a {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 400;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--ink-soft);
       text-decoration: none;
-      position: relative;
-      transition: color 0.2s;
     }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -3px; left: 0;
-      width: 0; height: 1px;
-      background: var(--accent-warm);
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover { color: var(--ink); }
-    .nav-links a:hover::after { width: 100%; }
 
     /* ── SECTIONS ── */
     section {
-      padding: 5rem 3rem; 
-      max-width: 1100px;
+      padding: 5rem 10%;
+      max-width: 1300px;
       margin: 0 auto;
     }
 
-    section:not(#home) {
-      border-top: 1px solid var(--rule);
-    }
+    section:not(#home) { border-top: 1px solid var(--rule); }
 
     #home {
       display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 5rem;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 4rem;
       align-items: center;
-      min-height: 80vh;
+      min-height: 85vh;
       padding-top: calc(var(--nav-height) + 2rem);
-    }
-
-    .photo-col {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.5rem;
     }
 
     .photo-frame {
       width: 100%;
       aspect-ratio: 4/5;
-      border-radius: 3px;
+      border-radius: 4px;
       overflow: hidden;
       background: var(--accent-light);
-      position: relative;
     }
 
-    .photo-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .photo-caption {
-      font-size: 11px;
-      color: var(--ink-muted);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
+    .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
 
     .bio-col h1 {
       font-family: var(--header-font);
-      font-size: clamp(34px, 5vw, 52px);
-      font-weight: 700;
+      font-size: clamp(32px, 5vw, 52px);
       line-height: 1.1;
-      color: var(--ink);
       margin-bottom: 1.5rem;
     }
 
-    .bio-col h1 em {
-      font-style: italic;
-      font-weight: 400;
-      color: var(--accent-warm);
-    }
+    .bio-col h1 em { font-style: italic; font-weight: 400; color: var(--accent-warm); }
 
-    .bio-text {
-      font-size: 15px;
-      line-height: 1.85;
-      color: var(--ink-soft);
-      max-width: 540px;
-    }
-    .bio-text p + p { margin-top: 1rem; }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 2rem;
-    }
-
-    .tag {
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 5px 13px;
-      border: 1px solid var(--rule);
-      border-radius: 100px;
-      color: var(--ink-soft);
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 1rem;
-      margin-top: 2.5rem;
-      align-items: center;
-    }
-
-    .btn-primary {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 12px 28px;
-      background: var(--ink);
-      color: var(--cream);
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-    .btn-primary:hover { background: var(--ink-soft); }
-
-    .btn-ghost {
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      text-decoration: none;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 2px;
-      transition: all 0.2s;
-    }
-    .btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
-
-    /* ── SECTION HEADER ── */
-    .section-header {
-      margin-bottom: 2.5rem;
-    }
-
-    .section-number {
-      font-size: 11px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-      margin-bottom: 0.5rem;
-    }
-
-    .section-title {
-      font-family: var(--header-font);
-      font-size: clamp(30px, 4vw, 42px);
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--ink);
-    }
-
-    .section-rule {
-      width: 48px;
-      height: 1px;
-      background: var(--accent-warm);
-      margin-top: 1.25rem;
-    }
-
-    /* ── PHILOSOPHY ── */
-    #philosophy .philosophy-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem 3.5rem;
-    }
-
-    .phil-lead {
-      grid-column: 1 / -1;
-      font-family: var(--body-font);
-      font-size: clamp(18px, 2.5vw, 24px);
-      font-style: italic;
-      color: var(--ink-soft);
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--rule);
-      margin-bottom: 1rem;
-    }
-
-    .phil-block h3 {
-      font-family: var(--header-font);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent-warm);
-      margin-bottom: 0.75rem;
-    }
-    .phil-block p { font-size: 15px; color: var(--ink-soft); line-height: 1.8; }
-
-    /* ── EXPERIENCE ── */
-    #experience .timeline { position: relative; padding-left: 2rem; }
-    #experience .timeline::before {
-      content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: var(--rule);
-    }
+    /* ── TIMELINE ── */
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: var(--rule); }
     .timeline-item { position: relative; padding-bottom: 3rem; }
-    .timeline-item::before {
-      content: ''; position: absolute; left: -2rem; top: 8px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-light); border: 1.5px solid var(--accent); transform: translateX(-3px);
-    }
+    .timeline-item::before { content: ''; position: absolute; left: -2rem; top: 8px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-light); border: 1.5px solid var(--accent); transform: translateX(-3px); }
     .tl-meta { display: flex; gap: 1rem; align-items: baseline; margin-bottom: 0.5rem; }
     .tl-year { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); }
     .tl-org { font-size: 11px; text-transform: uppercase; color: var(--accent-warm); }
     .tl-role { font-family: var(--header-font); font-size: 19px; font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; }
     .tl-desc { font-size: 14px; color: var(--ink-soft); max-width: 650px; }
 
-    /* ── PROJECTS ── */
-    #projects .project-grid {
+    /* ── PROJECT GRID ── */
+    .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5px;
       background: var(--rule);
       border: 1px solid var(--rule);
@@ -296,48 +135,33 @@
       background: var(--warm-white);
       padding: 2.5rem;
       text-decoration: none;
-      transition: background 0.2s;
       display: flex;
       flex-direction: column;
     }
-    .project-card:hover { background: var(--cream); }
-    .project-type { font-size: 10px; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 1rem; letter-spacing: 0.1em; }
-    .project-card h3 { font-family: var(--header-font); font-size: 18px; font-weight: 700; margin-bottom: 0.75rem; color: var(--ink); }
-    .project-card p { font-size: 13px; color: var(--ink-soft); margin-bottom: 1.5rem; }
 
-    .project-link {
-      font-family: var(--header-font);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--accent-warm);
-      margin-top: auto;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    .annotation-box {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: rgba(172, 168, 159, 0.1);
+      border-radius: 4px;
+      font-size: 14px;
     }
 
-    /* ── BACK TO TOP ── */
-    #backToTop {
-      position: fixed; bottom: 40px; right: 40px; width: 48px; height: 48px; background: var(--warm-white); border: 1px solid var(--rule); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; opacity: 0; visibility: hidden; transition: all 0.3s ease;
-    }
-    #backToTop.visible { opacity: 1; visibility: visible; }
-    #backToTop:hover { background: var(--ink); border-color: var(--ink); }
-    #backToTop svg { width: 20px; height: 20px; stroke: var(--accent-warm); }
-    #backToTop:hover svg { stroke: var(--cream); }
+    summary { cursor: pointer; font-weight: 700; color: var(--accent-warm); text-transform: uppercase; font-size: 11px; margin-bottom: 0.5rem; }
 
-    /* ── FOOTER ── */
-    footer { border-top: 1px solid var(--rule); padding: 3rem; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-
-    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-
+    /* ── MOBILE RESPONSIVENESS ── */
     @media (max-width: 768px) {
       nav { padding: 0 1.5rem; }
+      .nav-links { display: none; }
       section { padding: 4rem 1.5rem; }
-      #home { grid-template-columns: 1fr; gap: 2.5rem; }
-      footer { flex-direction: column; gap: 1rem; text-align: center; }
+      #home { grid-template-columns: 1fr; text-align: center; padding-top: 100px; }
+      .photo-col { max-width: 300px; margin: 0 auto; }
+      .project-grid { grid-template-columns: 1fr !important; }
+      .about-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
     }
+
+    .fade-in { opacity: 0; transform: translateY(20px); transition: 0.6s all ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
@@ -348,213 +172,138 @@
       <li><a href="#about">About</a></li>
       <li><a href="#philosophy">Philosophy</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#projects">Portfolio</a></li>
+      <li><a href="#reflection">Final Reflection</a></li>
     </ul>
   </nav>
-
-  <button id="backToTop" title="Back to Top">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
-  </button>
 
   <section id="home">
     <div class="photo-col fade-in">
       <div class="photo-frame">
-        <img src="headshot.jpg" alt="Meghan Gilligan" />
+        <img src="headshot.jpg" alt="Meghan Gilligan - Educational Studies Portfolio" />
       </div>
-      <p class="photo-caption">Meghan Gilligan &mdash; Durham Region</p>
+      <p style="font-size: 11px; margin-top: 1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-muted);">Durham Region, Ontario</p>
     </div>
 
-    <div class="bio-col">
-      <p class="eyebrow">Educational Portfolio</p>
+    <div class="bio-col fade-in">
+      <p style="text-transform: uppercase; font-size: 12px; letter-spacing: 0.2em; color: var(--accent-warm);">Educational Studies & Technology</p>
       <h1>Learning designer,<br /><em>educator</em>, and<br />career practitioner</h1>
       <div class="bio-text">
         <p>I work at the intersection of adult learning, instructional design, and human development, helping people navigate transitions into work, education, and professional practice.</p>
-        <p>With fifteen years of experience spanning employment counselling, career coaching, field placement supervision, and post-secondary teaching, I bring both depth of practice and a strong theoretical grounding in adult learning to every context in which I work.</p>
+        <p style="margin-top: 1rem;">With fifteen years of experience spanning employment counselling and post-secondary teaching, I bring depth of practice to leadership learning.</p>
       </div>
-      <div class="tag-row">
-        <span class="tag">Adult Learning</span>
-        <span class="tag">Instructional Design</span>
-        <span class="tag">Career Development</span>
-        <span class="tag">Equity-Centred Practice</span>
-        <span class="tag">Experiential Learning</span>
-      </div>
-      <div class="cta-row">
-        <a href="#about" class="btn-primary">Read more</a>
-        <a href="#projects" class="btn-ghost">View work samples</a>
+      <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+        <a href="#projects" style="padding: 12px 24px; background: var(--ink); color: white; text-decoration: none; font-size: 12px; text-transform: uppercase;">View Work Samples</a>
+        <a href="#philosophy" style="padding: 12px 24px; border: 1px solid var(--rule); text-decoration: none; font-size: 12px; text-transform: uppercase;">Teaching Philosophy</a>
       </div>
     </div>
   </section>
 
   <section id="about">
     <div class="section-header fade-in">
-      <p class="section-number">01 &mdash; About</p>
-      <h2 class="section-title">A practitioner who<br />designs for the person<br /></h2>
-      <div class="section-rule"></div>
+      <p style="font-size: 11px; text-transform: uppercase; color: var(--ink-muted);">01 — About</p>
+      <h2 style="font-family: var(--header-font); font-size: 32px; margin: 0.5rem 0 2rem 0;">Designing for the Person</h2>
     </div>
-    <div class="fade-in" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+    <div class="about-grid fade-in" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
       <div>
-        <p style="font-size: 15px; color: var(--ink-soft);">My work has always been about meeting people in the middle of change: a young person navigating their first job search, an adult returning to learning after years away, a student stepping into professional practice for the first time. For more than fifteen years, I have worked at the intersection of education, employment, and human development, and what has remained constant across every role is a belief that good learning design begins with deep respect for the learner.</p>
-        <p style="font-size: 15px; color: var(--ink-soft); margin-top: 1.25rem;">I began my career as an employment counsellor, holding a diploma in social service work, and eventually built a practice spanning youth programming, career coaching, transition support, and community development.</p>
+        <p>My work has always been about meeting people in the middle of change. For more than fifteen years, I have worked at the intersection of education, employment, and human development. I believe good learning design begins with deep respect for the learner.</p>
+        <p style="margin-top: 1.25rem;">I began my career as an employment counsellor and eventually built a practice spanning youth programming and career coaching.</p>
       </div>
       <div>
-        <p style="font-size: 15px; color: var(--ink-soft);">My undergraduate degree in educational studies, with a specialization in adult learning with technology, has given me language and theoretical grounding for what I had been doing intuitively. I now approach instructional and learning design with both practice and principle, using frameworks like backward design, grounding assessment in clearly defined learning outcomes, and drawing on experiential learning theory.</p>
-        <p style="font-size: 15px; color: var(--ink-soft); margin-top: 1.25rem;">I am drawn to roles in post-secondary education and learning design where I can contribute to programs and experiences that take equity seriously, built around who learners actually are, not who we assume they are.</p>
+        <p>My specialization in adult learning with technology has given me the theoretical grounding for my practice. I use frameworks like backward design and ground assessment in clearly defined outcomes[cite: 36, 43].</p>
+        <p style="margin-top: 1.25rem;">I am drawn to roles at OPG where I can contribute to programs that take equity and accessibility seriously[cite: 35, 54].</p>
       </div>
     </div>
   </section>
 
   <section id="philosophy">
     <div class="section-header fade-in">
-      <p class="section-number">02 &mdash; Philosophy</p>
-      <h2 class="section-title">How I think<br />about learning</h2>
-      <div class="section-rule"></div>
+      <p style="font-size: 11px; text-transform: uppercase; color: var(--ink-muted);">02 — Revised Teaching Philosophy</p>
+      <h2 style="font-family: var(--header-font); font-size: 32px; margin: 0.5rem 0 2rem 0;">Principles of Practice</h2>
     </div>
-    <div class="philosophy-grid fade-in">
-      <div class="phil-block">
-        <h3>Meeting people where they are</h3>
-        <p>Effective adult learning begins with the learner, not the curriculum. I approach every design challenge by first asking who is in the room, what they already know, and what barriers might stand between them and the learning.</p>
-      </div>
-      <div class="phil-block">
-        <h3>Equity as a design principle</h3>
-        <p>Inclusive design isn't an add-on or an accommodation; it's foundational. My experience working with learners across a wide spectrum of abilities, backgrounds, and life circumstances has shaped a practice that centres access, dignity, and belonging from the outset.</p>
-      </div>
-      <div class="phil-block">
-        <h3>Bridging theory and practice</h3>
-        <p>I use frameworks like backward design and experiential learning theory not as rigid templates but as lenses. The goal is always to transfer, creating learning experiences that connect meaningfully to what people will actually do when they leave the room.</p>
-      </div>
-      <div class="phil-block">
-        <h3>Lifelong learning as a lived value</h3>
-        <p>Returning to university while working full-time was a commitment to practising what I teach. I believe educators who continue to learn alongside their students bring a different quality of understanding to the work.</p>
-      </div>
+    <div class="fade-in" style="max-width: 850px; color: var(--ink-soft);">
+      <p><em>(Placeholder: Assignment #3 requires 800-1000 words here[cite: 123]. Ensure you discuss the intersection of technology and inclusion[cite: 121].)</em></p>
+      <p style="margin-top: 1.5rem;">My philosophy centers on <strong>Andragogy</strong>—the art and science of helping adults learn. I believe that leadership development is not about information transfer, but about creating space for dialogue and reflection[cite: 39, 51].</p>
     </div>
   </section>
 
   <section id="experience">
     <div class="section-header fade-in">
-      <p class="section-number">03 &mdash; Experience</p>
-      <h2 class="section-title">Fifteen years of practice<br />in learning and development</h2>
-      <div class="section-rule"></div>
+      <p style="font-size: 11px; text-transform: uppercase; color: var(--ink-muted);">03 — Experience</p>
+      <h2 style="font-family: var(--header-font); font-size: 32px; margin: 0.5rem 0 2rem 0;">Professional History</h2>
     </div>
     <div class="timeline fade-in">
       <div class="timeline-item">
         <div class="tl-meta"><span class="tl-year">2026 – Present</span><span class="tl-org">University</span></div>
         <p class="tl-role">Research Assistant — Experiential Learning</p>
-        <p class="tl-desc">Coding and analyzing qualitative research on how experiential learning contributes to students' sense of belonging and community in higher education.</p>
+        <p class="tl-desc">Analyzing qualitative research on how experiential learning contributes to students' sense of belonging in higher education.</p>
       </div>
       <div class="timeline-item">
         <div class="tl-meta"><span class="tl-year">2023 – Present</span><span class="tl-org">College</span></div>
         <p class="tl-role">Faculty — Social Service Worker Program</p>
-        <p class="tl-desc">Teaching in the SSW program and supervising student field placements, ensuring achievement of program learning outcomes while supporting the development of ethical practitioners.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-meta"><span class="tl-year">2025 – 2026</span><span class="tl-org">University</span></div>
-        <p class="tl-role">Instructional Design Assistant — Workplace Learning Course</p>
-        <p class="tl-desc">Contributed to the redevelopment of an undergraduate workplace learning course using backward design: defining outcomes, building unit plans, and creating assessments.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="tl-meta"><span class="tl-year">2024 – 2025</span><span class="tl-org">University</span></div>
-        <p class="tl-role">Teaching Assistant — Co-op & Career Readiness</p>
-        <p class="tl-desc">Supported career readiness courses in a Faculty of Business and Information Studies, working with students on professional development and employability skills.</p>
+        <p class="tl-desc">Teaching and supervising student field placements, ensuring achievement of program learning outcomes[cite: 45].</p>
       </div>
       <div class="timeline-item">
         <div class="tl-meta"><span class="tl-year">2011 – Present</span><span class="tl-org">Community & Non-Profit</span></div>
         <p class="tl-role">Employment Counsellor & Career Coach</p>
-        <p class="tl-desc">Fifteen years of direct practice supporting job seekers across the lifespan — from at-risk youth navigating complex barriers to an 80-year-old still eager to contribute. Roles included facilitating job search programming, running youth community development programs, and coordinating internships.</p>
+        <p class="tl-desc">Fifteen years of direct practice supporting job seekers across the lifespan, facilitating job search programming and youth development.</p>
       </div>
     </div>
   </section>
 
   <section id="projects">
     <div class="section-header fade-in">
-      <p class="section-number">04 &mdash; Projects</p>
-      <h2 class="section-title">Work samples &amp;<br />design projects</h2>
-      <div class="section-rule"></div>
+      <p style="font-size: 11px; text-transform: uppercase; color: var(--ink-muted);">04 — Curated Artifacts</p>
+      <h2 style="font-family: var(--header-font); font-size: 32px; margin: 0.5rem 0 2rem 0;">Design Showcase</h2>
     </div>
     <div class="project-grid fade-in">
-      <a href="#" class="project-card">
-        <p class="project-type">Instructional Design</p>
-        <h3>Workplace Learning Course Redesign</h3>
-        <p>A full course redevelopment using backward design — learning outcomes, unit plans, formative and summative assessments, and weekly content for an undergraduate adult learning course.</p>
-        <span class="project-link">View project</span>
-      </a>
-      <a href="https://meghan-gilligan.github.io/Thriving-as-an-Adult-Learner/" class="project-card" target="_blank">
-        <p class="project-type">eLearning</p>
+      <div class="project-card">
+        <p style="font-size: 10px; color: var(--accent-warm); text-transform: uppercase;">eLearning</p>
         <h3>Thriving as an Adult Learner</h3>
-        <p>Created a module with Articulate 360 about how students returning to post-secondary after 10+ years can thrive while managing competing demands.</p>
-        <span class="project-link">View project</span>
-      </a>
-      <a href="#" class="project-card">
-        <p class="project-type">Facilitation & Workshop Design</p>
-        <h3>Job Search Skills Workshop Series</h3>
-        <p>Facilitation materials, lesson plans, and workshop designs developed for co-op, work integrated learning and career readiness courses, and community employment programs.</p>
-        <span class="project-link">View project</span>
-      </a>
-      <a href="#" class="project-card">
-        <p class="project-type">Assessment & Evaluation</p>
-        <h3>Self-Assessment Skills in Higher Education</h3>
-        <p>Leveraged UDL principles to design and deploy a Canvas LMS module focused on self-assessment, fostering metacognitive growth and accuracy in higher education learners.</p>
-        <span class="project-link">View project</span>
-      </a>
-<div class="project-card">
-        <p class="project-type">Educational Technology</p>
+        <p style="font-size: 14px;">An Articulate 360 module for students returning to post-secondary education[cite: 50].</p>
+        <div class="annotation-box">
+          <details>
+            <summary>View Reflection (LO1, LO3)</summary>
+            <p style="margin-top: 10px;"><strong>Context:</strong> Created for EDST 41900 [cite: 95].<br><strong>Accessibility:</strong> High-contrast design and keyboard-navigable interactions[cite: 145].</p>
+          </details>
+        </div>
+        <a href="https://meghan-gilligan.github.io/Thriving-as-an-Adult-Learner/" target="_blank" style="margin-top: 1rem; color: var(--ink); font-weight: 700; text-decoration: none; font-size: 11px; text-transform: uppercase;">Launch Project →</a>
+      </div>
+
+      <div class="project-card">
+        <p style="font-size: 10px; color: var(--accent-warm); text-transform: uppercase;">Innovation</p>
         <h3>AI Tools in Career Planning</h3>
-<p style="font-size: 13px; color: var(--ink-soft); margin-bottom: 1.5rem; line-height: 1.75;">
-  Authored a digital resource for AI-driven career planning, selected as one of four projects to be showcased at the 
-  <a href="https://education.ontariotechu.ca/cdie/events/cdie-conf-2025.php#tab2-4" target="_blank" style="color: var(--accent-warm); text-decoration: underline; font-weight: 500;">2025 Digital Innovation in Education Conference</a> 
-  at Ontario Tech University.
-</p>
-        <a href="https://drive.google.com/file/d/1UVpdDqrd9GyubwlaKwMzRB5Vm3EXJOEA/view?usp=drive_link" class="project-link" target="_blank" style="text-decoration: none;">
-          View project
-        </a>
+        <p style="font-size: 14px;">Selected for the 2025 Digital Innovation in Education Conference at Ontario Tech.</p>
+        <div class="annotation-box">
+          <details>
+            <summary>View Reflection</summary>
+            <p style="margin-top: 10px;"><strong>Impact:</strong> Demonstrates the ability to synthesize emerging technology with career development strategy[cite: 46].</p>
+          </details>
+        </div>
+        <a href="https://drive.google.com/file/d/1UVpdDqrd9GyubwlaKwMzRB5Vm3EXJOEA/view?usp=drive_link" target="_blank" style="margin-top: 1rem; color: var(--ink); font-weight: 700; text-decoration: none; font-size: 11px; text-transform: uppercase;">View Resource →</a>
       </div>
+    </div>
   </section>
 
-  <section id="teaching">
+  <section id="reflection">
     <div class="section-header fade-in">
-      <p class="section-number">05 &mdash; Teaching</p>
-      <h2 class="section-title">Courses, facilitation<br />&amp; classroom practice</h2>
-      <div class="section-rule"></div>
+      <p style="font-size: 11px; text-transform: uppercase; color: var(--ink-muted);">05 — Professional Reflection</p>
+      <h2 style="font-family: var(--header-font); font-size: 32px; margin: 0.5rem 0 2rem 0;">Program Synthesis</h2>
     </div>
-    <div class="teaching-grid fade-in" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
-      <div class="teaching-card" style="border-top: 1.5px solid var(--ink); padding-top: 1.5rem;">
-        <h3 style="font-family: var(--header-font); font-size: 18px; font-weight: 700; margin-bottom: 0.5rem;">Social Service Worker Program</h3>
-        <p style="font-size: 11px; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 1rem;">College — 2023 – Present</p>
-        <p style="font-size: 14px; color: var(--ink-soft);">Teaching core SSW courses and supervising field placements. Focus on supporting students in developing ethical practice and professional judgment grounded in real-world experience.</p>
-      </div>
-      <div class="teaching-card" style="border-top: 1.5px solid var(--ink); padding-top: 1.5rem;">
-        <h3 style="font-family: var(--header-font); font-size: 18px; font-weight: 700; margin-bottom: 0.5rem;">Career Readiness (Teaching Assistant)</h3>
-        <p style="font-size: 11px; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 1rem;">University, Faculty of Business — 2024 – 2025</p>
-        <p style="font-size: 14px; color: var(--ink-soft);">Supporting undergraduate students in developing professional and employability skills, including job search strategy, networking, and workplace communication.</p>
-      </div>
+    <div class="fade-in" style="max-width: 850px; color: var(--ink-soft);">
+      <p><em>(Placeholder: 600-800 word concluding reflection on your development as an educator and designer[cite: 149].)</em></p>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2026 Meghan Gilligan. All rights reserved.</p>
-    <a href="mailto:meghan.gilligan@ontariotechu.net" style="font-family: var(--header-font); font-size: 11px; text-transform: uppercase; text-decoration: none; color: var(--ink-soft);">Contact me</a>
+  <footer style="padding: 4rem 10%; background: var(--warm-white); text-align: center; border-top: 1px solid var(--rule);">
+    <p style="font-size: 12px; color: var(--ink-muted);">&copy; 2026 Meghan Gilligan | Educational Studies</p>
   </footer>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.15 });
-
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    const backToTopBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) backToTopBtn.classList.add('visible');
-      else backToTopBtn.classList.remove('visible');
-    });
-
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
   </script>
 
 </body>
